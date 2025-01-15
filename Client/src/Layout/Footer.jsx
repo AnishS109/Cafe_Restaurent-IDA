@@ -14,11 +14,11 @@ const Footer = () => {
       <div className="bg-[#FE7700] w-full py-10 flex flex-col lg:flex-row justify-center items-center">
         {/* Text Content */}
         <div className="w-[90%] lg:w-[610px] text-center lg:text-left">
-          <p className="text-[#FFFFFF] font-holtwood text-[30px] lg:text-[40px]">
+          <p className="text-[#FFFFFF] font-holtwood text-[30px] lg:text-[40px] mr-8 md:mr-0">
             <span className="text-[#FE7700]">ani</span>
             Discover the
           </p>
-          <p className="text-[#FFFFFF] font-holtwood text-[30px] lg:text-[40px]">
+          <p className="text-[#FFFFFF] font-holtwood text-[30px] lg:text-[40px] mr-8 md:mr-0">
             <span className="text-[#FE7700]">ani</span>
             Reviews
           </p>
@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#FE7700] h-[397px]"></div>
+      <div className="bg-[#FE7700] h-[397px] w-full"></div>
     </Box>
   );
 };

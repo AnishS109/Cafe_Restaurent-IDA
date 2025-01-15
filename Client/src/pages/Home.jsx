@@ -1,7 +1,9 @@
 import React from 'react'
 import Layout from '../Layout/Layout'
-import { Button } from '@mui/material'
+import { Button, Box, Typography } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
+import Card from "../components/Card"
+import Image from "../components/cardImages"
 
 const Home = () => {
 
@@ -49,6 +51,56 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Box>
+
+        <Box className="ml-11">
+          <Typography className='font-holtwood text-3xl md:text-4xl mt-5 text-[#FE7700] mb-2'>
+            EXPLORE CAFE's
+          </Typography>
+          <Typography className='font-cambay text-md md:text-xl'>
+            Discover the cafe at your location with best taste.......
+          </Typography>
+        </Box>
+
+        <Box className=" h-16 w-11/12 flex flex-col md:flex-row mb-12 mt-4 md:mb-0 md:mt-4 justify-between ml-11 items-center">
+          
+        <Button className="font-cambay normal-case h-12 sm:h-14 md:h-14 text-base sm:text-lg md:text-xl bg-[#FE7700] text-white rounded-xl w-32 sm:w-36 md:w-40 font-semibold mr-12 md:mr-0">
+          Top Featured
+        </Button>
+
+        <Box className="flex items-center mt-4 md:mt-0 mr-12 md:mr-0">
+          <ul className="flex items-center md:mr-0">
+            <Button className="text-sm sm:text-base md:text-lg font-cambay bg-[#DBDADA] text-black normal-case rounded-xl h-10 sm:h-12 md:h-14 w-auto px-4 sm:px-6 hover:text-white hover:bg-[#FE7700] transition-all duration-200 ease-in-out">
+              All
+            </Button>
+
+            <Button className="text-sm sm:text-base md:text-lg font-cambay bg-[#DBDADA] text-black normal-case rounded-xl h-10 sm:h-12 md:h-14 w-auto px-4 sm:px-6 hover:text-white hover:bg-[#FE7700] transition-all duration-200 ease-in-out ">
+              Themed
+            </Button>
+
+            <Button className="text-sm sm:text-base md:text-lg font-cambay bg-[#DBDADA] text-black normal-case rounded-xl h-10 sm:h-12 md:h-14 w-auto px-4 sm:px-6 hover:text-white hover:bg-[#FE7700] transition-all duration-200 ease-in-out">
+              Brunch
+            </Button>
+
+            <Button className="text-sm sm:text-base md:text-lg font-cambay bg-[#DBDADA] text-black normal-case rounded-xl h-10 sm:h-12 md:h-14 w-auto px-4 sm:px-6 hover:text-white hover:bg-[#FE7700] transition-all duration-200 ease-in-out">
+              Pop-Up
+            </Button>
+
+            <Button className="text-sm sm:text-base md:text-lg font-cambay bg-[#DBDADA] text-black normal-case rounded-xl h-10 sm:h-12 md:h-14 w-auto px-4 sm:px-6 hover:text-white hover:bg-[#FE7700] transition-all duration-200 ease-in-out">
+              Espresso
+            </Button>
+          </ul>
+        </Box>
+        </Box>
+
+      </Box>
+
+      <Box className="flex flex-wrap w-[98vw] justify-center md:justify-between ">
+          {Image.map((data,index) => (
+            <Card key={index} data={data}/>
+          ))}
+      </Box>
 
     </Layout>
   )
